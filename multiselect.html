@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MULTI-SELECT</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1>Multiple Selections</h1>
+ <form action = >
+  <fieldset>
+ 		<label>
+				   Select the language(s) you know.
+				   (ctrl-click to select multiple lines)
+  		</label>
+			  <select id = "selLanguage"
+			    multiple = "multiple"
+			    size = "10">
+			   <option value = "HTML">HTML</option>
+			   <option value = "CSS">CSS</option>
+			   <option value = "JavaScript">JavaScript</option>
+			   <option value = "PHP">PHP</option>
+			   <option value = "MySQL">MySQL</option>
+			   <option value = "Java">Java</option>
+			   <option value = "VB.NET">VB.NET</option>
+			   <option value = "Python">Python</option>
+			   <option value = "Flash">Flash</option>
+			   <option value = "Perl">perl</option> 
+			  </select>
+	  <button type = "button"
+	    onclick = "showChoices()">
+	   Submit 
+	  </button>
+  </fieldset>
+ </form>
+ <div id = "output">
+ </div>
+ <script>
+	 //from multi-select.html
+  function showChoices(){
+  //retrieve data
+ 		 var selLanguage = document.getElementById("selLanguage");
+  //set up output string
+  		 var result = "<h2>Your Languages</h2>";
+ 		 result += "<ul> ";
+  //step through options
+ 		 for (i = 0; i < selLanguage.length; i++){
+   //examine current option
+  	     currentOption = selLanguage[i];
+   //print it if it has been selected
+  		 if (currentOption.selected == true){
+  		 result += " <li>" + currentOption.value + "</li> ";
+   } // end if
+  } // end for loop
+  //finish off the list and print it out
+  result += "</ul> ";
+  output = document.getElementById("output");
+  output.innerHTML = result;
+  } // end showChoices
+
+  console.log(output);
+</script>
+</body>
+
+
+</html>
+
+
+
+
+

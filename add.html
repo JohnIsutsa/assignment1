@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ADDITION</title>
+	<meta charset="utf-8">
+	<style>
+		p{
+			text-align: center;
+		}
+		
+	</style>
+</head>
+<body id="content">
+	<p>THIS IS AN ADDITION CALCULATOR</p>
+
+	<div><input type = "number" name="no.1" id = "number1">  +  <input type = "number" name="no.2" id = "number2"></div>
+
+	<br>
+	<br>
+	<br>
+	<button onclick = "add()" >ADD</button>
+
+	<p>ANSWER IS:</p>
+	<p id="demo"></p>
+	<script>
+
+	 function add() {
+    var y = document.getElementById("number1").value;
+    var z = document.getElementById("number2").value;
+    var x =  +y +  +z;
+    document.getElementById("demo").innerHTML = x;
+    console.log(x);
+     }
+    /* var input = 10;
+     var temp = 0;
+     var sum = 0;
+     while(temp<=input)
+     {
+     	sum+=temp;
+     	temp++;
+     }
+     console.log(sum);*/
+</script>
+
+	
+
+</body>
+
+</html>
